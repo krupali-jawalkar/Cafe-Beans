@@ -1,0 +1,20 @@
+.footnav{
+    height: 6rem;
+    width: 84.4rem; 
+    background-color: rgb(130, 75, 73);
+    padding-bottom: 5%;    
+}
+
+#name{
+    font-size: 20px;
+    color: rgb(192, 203, 222);
+    padding-left: 70px;
+    font-style: italic;
+}
+
+#name2{
+    font-size: 18px;
+    color: rgb(192, 203, 222);
+    padding-left: 70px;
+    font-style: italic;
+}

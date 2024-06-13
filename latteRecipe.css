@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: rgb(243, 219, 187);
+  }
+  
+  iframe {
+    height: 30rem;
+    width: 48rem;
+    right: 0px;
+  }
+  
+  
+  .ingredient {
+    margin: 0px;
+    padding: 0px;
+    height: 30rem;
+    width: 84.6rem;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .ing {
+    height: 30rem;
+    width: 49rem;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-family: Lucida Console;
+    color: rgb(43, 68, 40);
+  }
+  
+  .text {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-family: Lucida Console;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(43, 68, 40);
+    height: 10px;
+  }
+  
+  
+  .step {
+    position: absolute;
+    top: 40rem;
+    height: 10rem;
+    width: 100%;
+    font-size: 1.2rem;
+    color: rgb(43, 68, 40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .s1,.s2, .s3, .s4, .s5, .s6, .s7, .s8{
+  
+    margin-top: 4rem;
+    font-family: Lucida Console;
+    color: rgb(43, 68, 40);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  
+  
+  
+  

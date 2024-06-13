@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlap divs</title>
+    <style>
+        
+
+       
+
+        .div1 {
+            top: 0px;
+            left: 0px;
+            background-color: red;
+            z-index: 1;
+        }
+
+        .div2 {
+            top: -50px;
+            left: 50px;
+            background-color: blue;
+            /* Stacks this div above div1 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+</body>
+</html>
