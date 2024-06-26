@@ -1,0 +1,159 @@
+.scroll-left,
+.scroll-right {
+    position: absolute;
+    top: 70%; 
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.scroll-left {
+    left: 0;
+}
+
+.scroll-right {
+    right: 0;
+}
+
+.top-picks {
+    background-color: white;
+    padding: 20px;
+  
+  }
+  
+  .top-picks h2 {
+    text-align: center;
+  }
+  
+  .top-picks ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .top-picks ul li {
+    margin-bottom: 5px;
+  }
+
+.category-head{
+  margin-top: 2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #423c46;
+}
+
+.coffees {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  .coffee {
+    flex:  0 0 28%; /* Each coffees takes 25% of the container width */
+    padding: 0px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center;
+    background-color: rgba(73, 138, 67, 0.75);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin-top: 2rem;
+    height: 32rem;
+  }
+
+  .coffee img {
+    height: 73%;
+    width: 100%;
+    border-radius: 20px 20px 0 0; /* Rounded corners at the top */
+  }
+  
+  /* .coffee .coffee-details {
+    padding: 10px;
+    text-align: left;
+  } */
+  
+  .coffee .coffee-title {
+    font-size: 1.4rem;
+    margin: 10px 0 5px 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode';
+  }
+  
+  .coffee .coffee-price {
+    font-size: 1.2em;
+    color: #221e1e;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode';
+  }
+
+  .coffee-order {
+    background: linear-gradient(45deg, #8eff6177, #2ed8d862);
+    border: none;
+    color: rgb(134, 93, 93);
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.coffee-order::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.75s;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+}
+
+.coffee-order:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.coffee-order:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background: linear-gradient(45deg, #70e4a4, #40c561);
+}
+
+.coffee-order:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  
+  .coffee:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .scroll-buttons {
+    position: absolute;
+    top: 55px; 
+    transform: translateY(-50%); 
+    right: 90px;
+  }
+  
+  .scroll-left,
+  .scroll-right {
+      background-color: rgb(130, 122, 139);
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      margin-right: 5px;
+  }

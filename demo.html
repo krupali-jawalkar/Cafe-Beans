@@ -3,31 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overlap divs</title>
-    <style>
-        
-
-       
-
-        .div1 {
-            top: 0px;
-            left: 0px;
-            background-color: red;
-            z-index: 1;
-        }
-
-        .div2 {
-            top: -50px;
-            left: 50px;
-            background-color: blue;
-            /* Stacks this div above div1 */
-        }
-    </style>
+    <title>Cafe Beans</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.html">
+    <link rel="stylesheet" href="about.html">
 </head>
 <body>
-    <div class="container">
-        <div class="div1"></div>
-        <div class="div2"></div>
+    <header>
+        <div class="navbar">
+           
+                <div class="logo">
+                    <img src="images\coffeebeans.jpg" class="logo">
+                </div>
+          
+        </div>
+            <!-- <a class="home border" href="#">Home</a> <br>
+            <a class="home border" href="order.html">Order</a> <br>
+            <a class="home border" href="about.html">About us</a> <br>
+            <a class="home border" href="#">Contact</a>    -->
+    </header>
+
+    <div class="carousel">
+        <div class="slide"><img src="images/mocha.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="images/macchiato.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="images/latte.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="images/misto.jpg" alt="Slide 4"></div>
+        <div class="slide"><img src="images/americano.jpg" alt="Slide 5"></div>
     </div>
+    
+
+    <!-- <div class="hero-section">
+        <div class="content">
+            <p class="size">Welcome to <br> our Cafe</p>
+            <p class="daily">WE ARE OPEN <br>7 DAYS A WEEK &emsp; &emsp; 10AM-9PM</p>
+          </div>
+    </div> -->
+
+    <div class="explore">
+        <p class="moreabtcoffee">To know More About Coffees, Explore the page now!!</p>
+        <button class="explorebtn" id="recipe" target="_blank" >Explore</button>
+    </div> 
+
+    <!-- <footer>
+        <div class="footnav">
+           <p id="name">CAFE BEANS</p> 
+           <p id="name2">2022 &#169 Cafe Beans.All Rights Reserved</p>          
+        </div>      
+    </footer> -->
+
+    <script src="explore.js"></script>
+    <script src="scrolling.js"></script>
 </body>
 </html>
+
+<!-- css -->
+
+*{
+    margin: 0px;
+    position: relative;
+}
+
+.container {
+    position: relative;
+  }
+
+/* .navbar{
+    height: 60.3rem;
+    width: 17rem; 
+    background-color: rgb(128, 61, 59);
+    position: absolute; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;          */
+
+
+/* .border{
+    transition-timing-function: ease-in-out;
+    border: 1px solid transparent;
+}
+ 
+.border:hover{
+    border: 1px solid white;
+} */
+
+/* .home{
+    background-color:rgb(128, 61, 59) ;
+    color: wheat;
+    text-decoration: none;
+    margin-top: 10rem;
+} */
+
+/* .nav-logo{
+    background-color: rgb(128, 61, 59);
+    height: 200px;
+    width: 126px;
+    margin-right: 2rem;
+} */
+
+.logo{ 
+    height: 30%;
+    width: 40%;
+    border-radius: 50%; 
+    
+            
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 655px;
+    overflow: hidden;    
+}
+
+.slide {
+    /* z-index: 1; */
+    display: none;
+    width: 100%;
+    height: 90%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  
+
+/* .hero-section{
+    height: 545px;
+    margin-left: 272px;
+    background-image: url("coffee_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .content {
+        position: absolute;
+        left: 48.7%;
+        background: rgb(0, 0, 0); 
+        background: rgba(0, 0, 0, 0.5); 
+        color: #f1f1f1;
+        height: 78%;
+        width: 40%;
+        padding: 60px;
+} */
+
+/* .size{
+    padding-left: 60px;
+    font-size:39px;
+    height:100px;
+    width: 210px;
+}
+
+.daily{
+    padding-top: 60%;
+    font-size:29px;
+    font-family: monospace;
+    width: 100%;
+} */
+
+.explore{
+    height: 10rem;
+    width: 67rem;
+    margin-left: 270px;
+}
+
+/* .footnav{
+    height: 6rem;
+    width: 83.7rem; 
+    background-color: rgb(130, 75, 73);
+} */
+
+#name{
+    font-size: 20px;
+    color: rgb(192, 203, 222);
+    padding-left: 70px;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+#name2{
+    font-size: 18px;
+    color: rgb(192, 203, 222);
+    padding-left: 70px;
+    font-style: italic;
+    /* padding-top: 5px; */
+}
+
+.explore{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 5rem;
+}
+
+.moreabtcoffee{
+    margin-top: 5rem;
+    font-size: 20px;
+    
+}
+
+.explorebtn{
+    display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(68, 28, 27);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #8f5656;
+}
+
+.explorebtn:hover {background-color: rgb(92, 29, 50);}
+
+.explorebtn:active {
+  background-color:rgb(68, 28, 27);
+  box-shadow: 0 5px #575353;
+  transform: translateY(4px);
+}

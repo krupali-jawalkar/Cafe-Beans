@@ -5,46 +5,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Beans</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="order.html">
-    <link rel="stylesheet" href="about.html">
+    <link rel="stylesheet" href="coffeeTypes.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="nav-logo">
-                <div class="logo">
-                    <img src="images\coffeebeans.jpg" class="logo">
-                </div>
-            </div>
-            <a class="home border" href="#">Home</a> <br>
-            <a class="home border" href="order.html">Order</a> <br>
-            <a class="home border" href="about.html">About us</a> <br>
-            <a class="home border" href="#">Contact</a>   
-        </div>
-    </header>
 
-    <div class="hero-section">
-        <div class="content">
-            <p class="size">Welcome to <br> our Cafe</p>
-            <p class="daily">WE ARE OPEN <br>7 DAYS A WEEK &emsp; &emsp; 10AM-9PM</p>
+<header class="navbar">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#espresso-based">Espresso-Based</a></li>
+            <li><a href="#brewed-coffee">Brewed Coffee</a></li>
+            <li><a href="#cold-coffee">Cold Coffee</a></li>
+            <li><a href="#decaf-coffee">Decaf Coffee</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+  <div class="container">
+      <div class="carousel">
+          <div class="slide">
+              <img src="images/mocha.jpg" alt="Slide 1">
+              <div class="carousel-text">
+                  <h2>Delicious Mocha</h2>
+                  <p>Experience the rich flavor of our signature mocha blend.</p>
+              </div>
           </div>
+          <div class="slide">
+              <img src="images/macchiato.jpg" alt="Slide 2">
+              <div class="carousel-text">
+                  <h2>Smooth Macchiato</h2>
+                  <p>Savor the velvety texture and balanced taste of macchiato.</p>
+              </div>
+          </div>
+          <div class="slide">
+              <img src="images/latte.jpg" alt="Slide 3">
+              <div class="carousel-text">
+                  <h2>Creamy Latte</h2>
+                  <p>Indulge in the creamy goodness of our classic latte.</p>
+              </div>
+          </div>
+          <div class="slide">
+              <img src="images/misto.jpg" alt="Slide 4">
+              <div class="carousel-text">
+                  <h2>Refreshing Misto</h2>
+                  <p>Enjoy the refreshing blend of coffee and steamed milk in misto.</p>
+              </div>
+          </div>
+          <div class="slide">
+              <img src="images/americano.jpg" alt="Slide 5">
+              <div class="carousel-text">
+                  <h2>Strong Americano</h2>
+                  <p>Experience the bold flavor and intensity of our americano.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="explore">
+    <p class="moreabtcoffee">Unlock the chemistry of coffee and understand what makes each cup so unique.</p>
+    <button class="explorebtn" id="recipe">Explore</button>
+</div> 
+
+<!-------------------Espresso-based ----------------->
+
+<section id="espresso-based" class="top-picks">
+    <h2 class="category-head">Espresso-Based Drinks</h2>
+    <div class="scroll-buttons">
+        <button class="scroll-left">&larr;</button>
+        <button class="scroll-right">&rarr;</button>
     </div>
 
-    <div class="explore">
-        <p class="moreabtcoffee">To know More About Coffees, Explore the page now!!</p>
-        <button class="explorebtn" id="recipe" target="_blank" >Explore</button>
-    </div>
-
-    <footer>
-        <div class="footnav">
-           <p id="name">CAFE BEANS</p> 
-           <p id="name2">2022 &#169 Cafe Beans.All Rights Reserved</p>
-           
+    <div class="coffees">
+        <div class="coffee esp">
+            <img src="images/espresso.jpg" alt="espresso" class="dom-img">
+            <p class="coffee-title">Espresso</p>
+            <p class="coffee-price">₹210</p> 
+            <button class="coffee-order" onclick="orderCoffee('images/espresso.jpg','Espresso', '₹210')">Order</button>                   
         </div>
 
-       
-    </footer>
+        <div class="coffee amer">
+            <img src="images/americano.jpg" alt="americano" class="dom-img">
+            <p class="coffee-title">Americano</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/americano.jpg')">Order</button> 
+        </div>
 
-    <script src="explore.js"></script>
+        <div class="coffee capp">
+            <img src="images/cappuccino.jpeg" alt="cappuccino" class="dom-img">
+            <p class="coffee-title">Cappuccino</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/cappuccino.jpeg')">Order</button> 
+        </div>
+
+        <div class="coffee latte">
+            <img src="images/latte.jpg" alt="latte" class="dom-img">
+            <p class="coffee-title">Latte</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/latte.jpg')">Order</button> 
+        </div>
+
+        <div class="coffee macc">
+            <img src="images/macchiato.jpg" alt="macchiato" class="dom-img">
+            <p class="coffee-title">Macchiato</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/macchiato.jpg')">Order</button> 
+        </div>      
+    </div>
+</section>
+
+
+<!-------------------Brewed coffee --------------------------->
+<section id="brewed-coffee" class="top-picks">
+    <h2 class="category-head">Brewed Coffee Categories</h2>
+    <div class="scroll-buttons">
+        <button class="scroll-left">&larr;</button>
+        <button class="scroll-right">&rarr;</button>
+    </div>
+
+    <div class="coffees">
+        <div class="coffee drip">
+            <img src="images/drip.jpg" alt="drip" class="dom-img">
+            <p class="coffee-title">Drip Coffee</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/drip.jpg')">Order</button>                     
+        </div>
+
+        <div class="coffee french">
+            <img src="images/FrenchPress.jpeg" alt="french press" class="dom-img">
+            <p class="coffee-title">French Press</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/FrenchPress.jpeg')">Order</button> 
+        </div>
+        
+        <div class="coffee turkish">
+            <img src="images/Turkish.jpg" alt="turkish" class="dom-img">
+            <p class="coffee-title">Turkish Coffee</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/Turkish.jpg')">Order</button> 
+        </div>
+
+        <div class="coffee japanese">
+            <img src="images/japanese.jpg" alt="japanese" class="dom-img">
+            <p class="coffee-title">Japanese Iced Coffee</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/japanese.jpg')">Order</button> 
+        </div>
+    </div>
+</section>
+
+
+<!---------------------------- Cold coffee ----------------------------------->
+<section id="cold-coffee" class="top-picks">
+    <h2 class="category-head">Cold Coffees</h2>
+    <div class="scroll-buttons">
+        <button class="scroll-left">&larr;</button>
+        <button class="scroll-right">&rarr;</button>
+    </div>
+
+    <div class="coffees">
+        <div class="coffee ilatte">
+            <img src="images/iced-latte.jpg" alt="iced latte" class="dom-img">
+            <p class="coffee-title">Iced Latte</p> 
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/iced-latte.jpg')">Order</button>                    
+        </div>
+
+        <div class="coffee imocha">
+            <img src="images/iced-mocha.jpg" alt="iced mocha" class="dom-img">
+            <p class="coffee-title">Iced Mocha</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/iced-mocha.jpg')">Order</button> 
+        </div>
+
+        <div class="coffee frapp">
+            <img src="images/Frappuccino.jpeg" alt="frappuccino" class="dom-img">
+            <p class="coffee-title">Frappuccino</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/Frappuccino.jpeg')">Order</button> 
+        </div>
+
+        <div class="coffee nitro">
+            <img src="images/nitro.jpeg" alt="nitro" class="dom-img">
+            <p class="coffee-title">Nitro Coffee</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/nitro.jpeg')">Order</button> 
+        </div>
+    </div>
+</section>
+
+<!---------------Decaf coffee ------------------>
+<section id="decaf-coffee" class="top-picks">
+    <h2 class="category-head">Decaffeinated Coffees</h2>
+    <div class="scroll-buttons">
+        <button class="scroll-left">&larr;</button>
+        <button class="scroll-right">&rarr;</button>
+    </div>
+
+    <div class="coffees">
+        <div class="coffee goa">
+            <img src="images/decaf-esp.jpeg" alt="decaf espresso" class="dom-img">
+            <p class="coffee-title">Decaf Drip Coffee</p>
+            <p class="coffee-price">₹210</p> 
+            <button class="coffee-order" onclick="orderCoffee('images/decaf-esp.jpeg')">Order</button>                    
+        </div>
+
+        <div class="coffee srinagar">
+            <img src="images/FrenchPress.jpeg" alt="french press" class="dom-img">
+            <p class="coffee-title">French Press</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/FrenchPress.jpeg')">Order</button> 
+        </div>
+        <div class="coffee shimla">
+            <img src="images/Turkish.jpg" alt="turkish" class="dom-img">
+            <p class="coffee-title">Turkish Coffee</p>
+            <p class="coffee-price">₹210</p>
+            <button class="coffee-order" onclick="orderCoffee('images/Turkish.jpg')">Order</button> 
+        </div>
+
+    </div>
+</section>
+
+<script src="scrolling.js"></script>
+<script src="explore.js"></script>
+<script>
+    function orderCoffee(name, price, image) {
+        // Encode special characters in image URL
+        const encodedImage = encodeURIComponent(image);
+        // Redirect to order.html with parameters
+        window.location.href = `order.html?name=${name}&price=${price}&image=${encodedImage}`;
+    }
+</script>
+
+</script>
 </body>
 </html>

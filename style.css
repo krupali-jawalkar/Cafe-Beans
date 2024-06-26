@@ -1,128 +1,83 @@
-*{
-    margin: 0px;
-    position: relative;
+* {
+  margin: 0px;
+  position: relative;
 }
 
-.navbar{
-    height: 60.3rem;
-    width: 17rem; 
-    background-color: rgb(128, 61, 59);
-    position: absolute;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;         
+body{
+  background-color: black;
 }
 
-.border{
-    transition-timing-function: ease-in-out;
-    border: 1px solid transparent;
+.container {
+  position: relative;
 }
 
-.border:hover{
-    border: 1px solid white;
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.home{
-    background-color:rgb(128, 61, 59) ;
-    color: wheat;
-    text-decoration: none;
+.carousel .slide {
+  position: relative;
+  width: 100%;
+  display: none;
 }
 
-.nav-logo{
-    /* background-color: rgb(128, 61, 59); */
-    height: 200px;
-    width: 126px;
-    margin-right: 2rem;
+.carousel .slide img {
+  width: 100%;
+  height: 40rem;
 }
 
-.logo{
-    /* background-color: rgb(128, 61, 59); */
-    height: 170px;
-    width: 110%;
-    border-radius: 50%;
-    
-    background-image: url("images\coffeebeans.jpg");    
+.carousel .carousel-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.hero-section{
-    height: 545px;
-    margin-left: 272px;
-    background-image: url("coffee_bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.carousel .carousel-text h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 
-.content {
-        position: absolute;
-        left: 48.7%;
-        background: rgb(0, 0, 0); /* Fallback color */
-        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-        color: #f1f1f1;
-        height: 78%;
-        width: 40%;
-        padding: 60px;
+.carousel .carousel-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.size{
-    padding-left: 60px;
-    font-size:39px;
-    height:100px;
-    width: 210px;
+
+.explore {
+  height: 17rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(46, 49, 46);
+  
 }
 
-.daily{
-    padding-top: 60%;
-    font-size:29px;
-    font-family: monospace;
-    width: 100%;
+.moreabtcoffee {
+  margin-top:2.5rem ;
+  font-size: 30px;
+  color: #588f56;
+  text-shadow: 2px 2px 4px #917676;
 }
 
-.explore{
-    height: 25rem;
-    width: 67rem;
-    margin-left: 270px;
-
-}
-
-.footnav{
-    height: 6rem;
-    width: 84rem; 
-    background-color: rgb(130, 75, 73);
-        
-}
-
-#name{
-    font-size: 20px;
-    color: rgb(192, 203, 222);
-    padding-left: 70px;
-    padding-top: 20px;
-    font-style: italic;
-}
-
-#name2{
-    font-size: 18px;
-    color: rgb(192, 203, 222);
-    padding-left: 70px;
-    font-style: italic;
-    /* padding-top: 5px; */
-}
-
-.explore{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   gap: 5rem;
-}
-
-.moreabtcoffee{
-    font-size: 20px;
-    
-}
-
-.explorebtn{
-    display: inline-block;
+.explorebtn {
+  margin-top:3rem ;
+  display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
@@ -130,17 +85,21 @@
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: rgb(68, 28, 27);
+  background-color: rgb(73, 138, 67);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #8f5656;
-
+  /* box-shadow: 0 9px #9faaa4; */
+  text-shadow: 2px 2px 4px #917676;
 }
 
-.explorebtn:hover {background-color: rgb(92, 29, 50);}
+.explorebtn:hover {
+  background-color: rgb(107, 190, 86);
+}
 
 .explorebtn:active {
-  background-color:rgb(68, 28, 27);
-  box-shadow: 0 5px #575353;
+  background-color: rgb(107, 190, 86);
   transform: translateY(4px);
 }
+
+
+  

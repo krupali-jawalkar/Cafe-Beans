@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order Coffee</title>
+    <link rel="stylesheet" href="order.css">
 </head>
 <body>
     
+        <img src="images/beans.jpeg" alt="beans" class="bgbeans">
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <div class="order-details">
+                <img id="coffeeImage" src="" alt="Selected Coffee">
+                <p id="coffeeName"></p>
+                <p id="coffeePrice"></p>
+            </div>
+            <button onclick="confirmOrder()">Confirm Order</button>
+        </div>
+    
+        <script>
+            // Retrieve and display selected coffee details from query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedCoffeeName = decodeURIComponent(urlParams.get('name'));
+            const selectedCoffeePrice = decodeURIComponent(urlParams.get('price'));
+            const selectedCoffeeImg = decodeURIComponent(urlParams.get('image'));
+    
+            document.getElementById('coffeeImage').src = selectedCoffeeImg;
+            document.getElementById('coffeeName').textContent = selectedCoffeeName;
+            document.getElementById('coffeePrice').textContent = selectedCoffeePrice;
+    
+            function confirmOrder() {
+                // Handle order confirmation logic here
+                alert(`Order confirmed for ${selectedCoffeeName} at ${selectedCoffeePrice}.`);
+                // Optionally, redirect to homepage or clear localStorage/sessionStorage
+            }
+        </script>
 </body>
 </html>
