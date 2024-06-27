@@ -75,7 +75,7 @@ body{
   text-shadow: 2px 2px 4px #917676;
 }
 
-.explorebtn {
+/* .explorebtn {
   margin-top:3rem ;
   display: inline-block;
   padding: 15px 25px;
@@ -88,7 +88,7 @@ body{
   background-color: rgb(73, 138, 67);
   border: none;
   border-radius: 15px;
-  /* box-shadow: 0 9px #9faaa4; */
+  box-shadow: 0 9px #9faaa4; 
   text-shadow: 2px 2px 4px #917676;
 }
 
@@ -99,7 +99,49 @@ body{
 .explorebtn:active {
   background-color: rgb(107, 190, 86);
   transform: translateY(4px);
-}
+} */
 
-
+.explorebtn {
+  display: inline-block;
+  border-radius: 7px;
+  border: none;
+  background: #18ff5d;
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0px 14px 56px -11px #92e6a7;
+  width: 10em;
+  padding: 1em;
+  margin-top: 3rem;
+  transition: all 0.4s;
+  cursor: pointer;
+ }
+ 
+ .explorebtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+ }
+ 
+ .explorebtn span:after {
+  content: ' for more';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.7s;
+ }
+ 
+ .explorebtn:hover span {
+  padding-right: 3.55em;
+ }
+ 
+ .explorebtn:hover span:after {
+  opacity: 4;
+  right: 0;
+ }
   
+
+ 

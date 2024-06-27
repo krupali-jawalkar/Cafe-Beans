@@ -96,15 +96,40 @@
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    margin: 5px 2px;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
     overflow: hidden;
-
+    margin-left: 2rem;
 }
+
+.order-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantbtns {
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+    position: relative;
+}
+
+.quant {
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.bi {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
 
 .coffee-order::before {
     content: '';

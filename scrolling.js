@@ -1,5 +1,4 @@
-// Dynamic Time Greeting
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     const hours = new Date().getHours();
     let greeting;
 
@@ -11,34 +10,32 @@ window.onload = function() {
         greeting = "Good Evening!";
     }
 
-    document.querySelector('.daily').insertAdjacentHTML('beforebegin', `<p class="greeting">${greeting}</p>`);
-};
+    const dailyElement = document.querySelector('.daily');
 
+    if (dailyElement) {
+        dailyElement.insertAdjacentHTML('beforebegin', `<p class="greeting">${greeting}</p>`);
+    }
+    
+    // Image Slider
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel .slide');
+    const totalSlides = slides.length;
 
-// Image Slider
-let slideIndex = 0;
-const slides = document.querySelectorAll('.carousel .slide');
-const totalSlides = slides.length;
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-    });
-}
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        showSlide(slideIndex);
+    }
 
-function nextSlide() {
-    slideIndex = (slideIndex + 1) % totalSlides;
+    setInterval(nextSlide, 1500); // Change image every 1.5 seconds
     showSlide(slideIndex);
-}
 
-setInterval(nextSlide, 1500); // Change image every 3 seconds
-showSlide(slideIndex);
-
-
-// image scrolling 
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle scrolling for all sections
+    // Image scrolling
     function handleScroll(button, direction) {
         const section = button.closest('.top-picks');
         const coffeesContainer = section.querySelector('.coffees');
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add event listeners to all scroll buttons
     document.querySelectorAll('.scroll-left').forEach(button => {
         button.addEventListener('click', () => handleScroll(button, 'left'));
     });
@@ -57,11 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.scroll-right').forEach(button => {
         button.addEventListener('click', () => handleScroll(button, 'right'));
     });
-});
 
-// navbar
-
-document.addEventListener('DOMContentLoaded', function() {
+    // Navbar scrolling
     const links = document.querySelectorAll('.navbar nav ul li a');
 
     for (const link of links) {
@@ -77,6 +70,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-
-
